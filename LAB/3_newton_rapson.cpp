@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+using namespace std;
 
 double function(double x)
 {
@@ -24,14 +25,14 @@ double newton_method(double x0, double tol, int max_iter)
 
         x = x - fx / dfx;
 
-        if (std::abs(fx) < tol)
+        if (abs(fx) < tol)
         {
-            std::cout << "Root found at iteration " << iter << ": " << x << std::endl;
+            cout << "Root found at iteration " << iter << ": " << x << endl;
             return x;
         }
     }
 
-    std::cout << "Maximum iterations reached. No root found within the specified tolerance." << std::endl;
+    cout << "Maximum iterations reached. No root found within the specified tolerance." << std::endl;
     return x; // You might want to handle this case differently
 }
 
